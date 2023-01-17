@@ -1,17 +1,21 @@
+import React from 'react';
+import {Navigate} from 'react-router-dom'
 import About from '../pages/About'
 import Home from '../pages/Home'
 import Connet from '../pages/Connet'
 import News from '../pages/News'
 import Shopping from '../pages/Shopping'
+import InteriorPainting from '../pages/InteriorPainting'
 
 const router=[
-    { path: '/', element: <Home /> },
+    { path: '/home', element: <Home /> },
     { path: 'about', element: <About /> },
-    { path: 'Connet', element: <Connet /> },
-    { path: 'News', element: <News /> },
-    { path: 'Shopping', element: <Shopping /> },
+    { path: 'connet', element: <Connet /> },
+    { path: 'news', element: <News /> },
+  { path: 'shopping', element: <Shopping /> },
+  { path: 'interior', element: <InteriorPainting /> },
       // 重定向
-    { path: 'home', redirectTo: '/' },
+  { path: '/', element: <Navigate to={'/home'}/>},
     // 404找不到
     // { path: '*', element: <NotFound /> }
 ]
