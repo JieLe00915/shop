@@ -80,40 +80,40 @@ export default function Home() {
     <div className="homeHeader">
       <div className="header">
         <ul>
-          <li style={{ width: "716px", height: "490px" }}>
+          <li style={{ width: "945px", height: "647px" }}>
             <Carousel autoplay>
               <div>
-                <img src={hoLb1} alt="1" />
+                <img src={hoLb1} alt="1" height={647}/>
               </div>
               <div>
-                <img src={hoLb2} alt="1" />
+                <img src={hoLb2} alt="1" height={647}/>
               </div>
               <div>
-                <img src={hoLb3} alt="1" />
+                <img src={hoLb3} alt="1" height={647}/>
               </div>
             </Carousel>
           </li>
-          <li style={{ height: "490px" }}>
+          <li style={{ height: "647px" }}>
             <Popover placement="top" title="商品名称" content={<>灯具</>}>
               <img src={home1} alt="1" />
             </Popover>
           </li>
-          <li style={{ height: "490px" }}>
+          <li style={{ height: "647px" }}>
             <Popover placement="top" title="商品名称" content={<>椅子</>}>
               <img src={home2} alt="1" />
             </Popover>
           </li>
-          <li style={{ height: "365px" }}>
+          <li style={{ height: "487px" ,width:"467px"}}>
             <Popover placement="top" title="商品名称" content={<>装饰品</>}>
               <img src={home3} alt="1" />
             </Popover>
           </li>
-          <li style={{ height: "365px" }}>
+          <li style={{ height: "487px",width:"467px" }}>
             <Popover placement="top" title="商品名称" content={<>电视柜</>}>
               <img src={home4} alt="1" />
             </Popover>
           </li>
-          <li style={{ width: "715px", height: "367px" }}>
+          <li style={{ width: "938px", height: "487px" }}>
             <Popover placement="top" title="商品名称" content={<>沙发</>}>
               <img src={home5} alt="1" />
             </Popover>

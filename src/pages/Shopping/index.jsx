@@ -68,11 +68,10 @@ export default function Shopping() {
     console.log(e.target.innerText);
     setSeachKey(e.target.innerText);
   }
-  console.log(111, seachKey);
   return (
     <div className="warp">
-      <div>
-        <img src={shopbg} alt="bg" height={337} />
+      <div className="shopImg">
+        <img src={shopbg} alt="bg" />
       </div>
       <div className="second-home">
         <div className="secContent">

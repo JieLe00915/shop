@@ -1,0 +1,96 @@
+.news {
+  width: 100%;
+  .newsImg {
+    width: 100%;
+    height: 450px;
+  }
+  .second-home {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 246px;
+    .secContent {
+      width: 1190px;
+      margin: 0 auto;
+      margin-top: 60px;
+      text-align: center;
+      div {
+        font-size: 18px;
+        color: #000;
+        margin-bottom: 16px;
+      }
+      h1 {
+        margin: 0;
+      }
+      p {
+        color: #999;
+        font-size: 12px;
+      }
+    }
+  }
+  ul {
+    width: 1174px;
+    margin: 0 auto;
+    li:hover img {
+      transform: scale(1.1);
+    }
+    li:hover .liImg {
+      width: 520px;
+    }
+    li {
+      box-sizing: border-box;
+      padding: 8px;
+      width: 1174px;
+      height: 420px;
+      display: flex;
+      justify-content: space-between;
+      .liImg {
+        height: 400px;
+        width: 500px;
+        margin-left: 70px;
+        overflow: hidden;
+        transition: all 1.5s;
+        img {
+          height: 400px;
+          width: 500px;
+          transition: all 1.5s;
+          overflow: hidden;
+        }
+      }
+
+      .newsRight {
+        width: 567px;
+        height: 400px;
+        padding-left: 50px;
+        background-color: #f5f6f8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .newstitle {
+          width: 360px;
+          height: 49px;
+          color: #333333;
+          font-size: 18px;
+          font-family: 微软雅黑;
+          font-weight: normal;
+          padding-top: 10px;
+          padding-bottom: 15px;
+          border-bottom: 1px solid #dddddd;
+        }
+        .newsdata {
+          color: #999999;
+          font-size: 14px;
+          padding: 10px 0 0 0;
+        }
+        p {
+          width: 360px;
+          color: #999999;
+          font-size: 12px;
+          padding: 20px 0 0;
+          word-break: break-all;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
