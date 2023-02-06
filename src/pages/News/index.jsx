@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import './index.scss'
 import newbg from "../../images/newBg.webp";
-import news1 from "../../images/news3.webp";
+import news1 from "../../images/news2.webp";
 export default function News() {
   const [datas,setDatas]=useState([])
   const list=[
@@ -17,7 +17,6 @@ export default function News() {
       content1:'2.依据墙体尺寸 悬挂装饰画或是前方没有参照物，或是忽略参照物的存在，以装饰画可占用客厅区墙体，或当客厅与其它区域相连，并共用同面“不间断”墙体时，可占用的该“共用墙体”面积为参照，面积长度较大，单幅装饰画宽度或组合装饰画的“总宽度”是它的2/3左右较合适，面积长度较小，单幅装饰画宽度或组合装饰画的“总宽度”是它的0.8倍左右较合适，有较饱满的装饰感，对于“公用墙体”而言，还有将相连区域“合二为一”，扩大区域面积感的效果，但装饰画只占用客厅区墙体，且墙体前方有参照物的情况，会有一定的压迫感产生，考虑在内；',
     },
     {
-      // src:"http://localhost:3001/static/media/news3.adf36f5f743bb1380f80.webp",
       src:"http://localhost:3000/static/media/news2.86144aadf4afc13aa349.webp",
       title:"说到墙面装饰，你一定会想起来的照片墙",
       data:'2017/ 05/23 18：05',

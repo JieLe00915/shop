@@ -6,7 +6,8 @@ import Connet from '../pages/Connet'
 import News from '../pages/News'
 import Shopping from '../pages/Shopping'
 import InteriorPainting from '../pages/InteriorPainting'
-
+import Login from '../pages/Login'
+import Register from '../pages/Register'
 const router = [
   { path: '/home', element: <Home /> },
   { path: 'about', element: <About /> },
@@ -14,6 +15,8 @@ const router = [
   { path: 'news', element: <News /> },
   { path: 'shopping', element: <Shopping /> },
   { path: 'interior', element: <InteriorPainting /> },
+  { path: 'login', element: <Login /> },
+  { path: 'register', element: <Register /> },
   // 重定向
   { path: '/', element: <Navigate to={'/home'} /> },
   // 404找不到

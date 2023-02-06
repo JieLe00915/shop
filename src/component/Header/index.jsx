@@ -1,14 +1,54 @@
-import React from "react";
-import { UserOutlined, ShoppingCartOutlined } from "@ant-design/icons";
-import { NavLink } from "react-router-dom";
-import { Input } from "antd";
+import React, { useState, useEffect } from "react";
+import {
+  UserOutlined,
+  ShoppingCartOutlined,
+  PoweroffOutlined,
+} from "@ant-design/icons";
+import { NavLink, Link } from "react-router-dom";
+import { Input, Button, Space, message } from "antd";
 import "./index.scss";
 import logoimg from "../../images/logo.webp";
 const { Search } = Input;
 const Header = () => {
+  // 关闭加载
+  const [loadings, setLoadings] = useState([]);
+  const [user, setUser] = useState("");
+  //获取本地用户
+  // @ts-ignore
+  const users = JSON.parse(window.localStorage.getItem("shopUser"));
+  useEffect(() => {
+    if (users) {
+      setUser(users.username);
+    }
+  }, [users]);
+  console.log(user);
+  // 搜索
   function onSearch(value) {
     console.log(value);
   }
+
+  // 退出登录
+  const enterLoading = (index) => {
+    // @ts-ignore
+    setLoadings((prevLoadings) => {
+      const newLoadings = [...prevLoadings];
+      newLoadings[index] = true;
+      return newLoadings;
+    });
+    setTimeout(() => {
+      // @ts-ignore
+      setLoadings((prevLoadings) => {
+        const newLoadings = [...prevLoadings];
+        newLoadings[index] = false;
+        // 清空本地
+        // @ts-ignore
+        window.localStorage.clear("shopUser");
+        setUser("");
+        message.success("退出登录！");
+        return newLoadings;
+      });
+    }, 2000);
+  };
   return (
     <div className="Header">
       <div className="log-bar">
@@ -81,8 +121,22 @@ const Header = () => {
         />
         <div className="nav-icon">
           <ShoppingCartOutlined style={{ color: "red", fontSize: "25px" }} />
-          <UserOutlined style={{ color: "red", fontSize: "25px" }} />
+          <Link to={"/login"}>
+            <UserOutlined style={{ color: "red", fontSize: "25px" }} />
+          </Link>
         </div>
+      </div>
+      <div className="admin">
+        <p>{user}</p>
+
+        <Space>
+          <Button
+            type="default"
+            icon={<PoweroffOutlined />}
+            loading={loadings[2]}
+            onClick={() => enterLoading(2)}
+          />
+        </Space>
       </div>
     </div>
   );
