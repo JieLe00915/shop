@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import shopbg from "../../images/shop.webp";
 import "./index.scss";
+import { Link } from "react-router-dom";
 import { Button, Tooltip, Card } from "antd";
 const { Meta } = Card;
 const customColors = ["椅子", "沙发", "电视柜", "灯饰", "装饰"];
@@ -19,42 +20,62 @@ export default function Shopping() {
       title: "椅子",
       price: 34134,
       src: "http://localhost:3000/static/media/hoLb1.e700a08430757a29ed1a.webp",
+      cid: 2132,
+      desc: '对得起我佛起飞后啊十四大',
+      category:'椅子'
     },
     {
       id: 34,
       title: "椅子",
       price: 34134,
       src: "http://localhost:3000/static/media/hoLb1.e700a08430757a29ed1a.webp",
+      desc: '对得起我佛起飞后啊十四大',
+      category:'椅子'
     },
     {
       id: 34,
       title: "椅子",
       price: 34134,
       src: "http://localhost:3000/static/media/hoLb1.e700a08430757a29ed1a.webp",
+      desc: '对得起我佛起飞后啊十四大',
+      category:'椅子',
+      cid:2132
     },
     {
       id: 34,
       title: "椅子",
       price: 34134,
       src: "http://localhost:3000/static/media/hoLb1.e700a08430757a29ed1a.webp",
+      cid: 2132,
+      desc: '对得起我佛起飞后啊十四大',
+      category:'椅子'
     },
     {
       id: 34,
       title: "椅子",
       price: 34134,
       src: "http://localhost:3000/static/media/hoLb1.e700a08430757a29ed1a.webp",
+      cid: 2132,
+      desc: '对得起我佛起飞后啊十四大',
+      category:'椅子'
     },
     {
       id: 34,
       title: "椅子",
       price: 34134,
       src: "http://localhost:3000/static/media/hoLb1.e700a08430757a29ed1a.webp",
+      cid: 2132,
+      desc: '对得起我佛起飞后啊十四大',
+      category:'椅子'
     },
     {
       id: 34,
       title: "椅子",
       price: 34134,
       src: "http://localhost:3000/static/media/hoLb1.e700a08430757a29ed1a.webp",
+      cid: 2132,
+      desc: '对得起我佛起飞后啊十四大',
+      category:'椅子'
     },
 
     {
@@ -62,6 +83,9 @@ export default function Shopping() {
       title: "椅子",
       price: 34134,
       src: "http://localhost:3000/static/media/hoLb1.e700a08430757a29ed1a.webp",
+      cid: 2132,
+      desc: '对得起我佛起飞后啊十四大',
+      category:'椅子'
     },
   ];
   function clickSerch(e) {
@@ -83,7 +107,7 @@ export default function Shopping() {
           </p>
           <div className="shopTag">
             {customColors.map((color) => (
-              <Tooltip color={color} key={color}>
+              <Tooltip  key={color}>
                 <Button onClick={clickSerch}>{color}</Button>
               </Tooltip>
             ))}
@@ -93,14 +117,25 @@ export default function Shopping() {
       <div className="three-home">
         {addDatas.map((ele, index) => {
           return (
-            <Card
-              key={index}
+            <Link  key={index}  to={"/shopcar"} state={{
+              src: ele.src,
+              cid: ele.cid,
+              title: ele.title,
+              desc: ele.desc,
+              price: ele.price,
+              category:ele.category,
+            }}>
+              <Card
+             
               hoverable
               style={{ width: 282, height: 344 }}
               cover={<img alt="example" src={ele.src} height={282} />}
+              
             >
               <Meta title={ele.title} description={"¥ " + ele.price} />
             </Card>
+              </Link >
+            
           );
         })}
       </div>

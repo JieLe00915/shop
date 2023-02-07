@@ -22,7 +22,6 @@ const Login = () => {
       username: values.username,
       password: values.password
     }
-   console.log(personObj, 11);
    navigate(-1)
    window.localStorage.setItem('shopUser',JSON.stringify(personObj));
   };

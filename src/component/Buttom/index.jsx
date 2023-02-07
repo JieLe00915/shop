@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import './index.scss'
 import buttomImg from '../../images/buttom.png'
 import qRImg from '../../images/btqr.webp'
@@ -9,6 +9,13 @@ import bt3 from '../../images/bt-3.webp'
 import bt4 from '../../images/bt-4.webp'
 import bt5 from '../../images/bt-5.webp'
 export default function Button() {
+  const [data, setdata] = useState(0)
+  useEffect(() => {
+   let timer=setInterval(() => {
+     setdata(data+1)
+   }, 1000);
+})
+
   return (
     <div className='buttom-header'>
       <div className='btHeaderImg'>

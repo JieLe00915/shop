@@ -8,6 +8,7 @@ import Shopping from '../pages/Shopping'
 import InteriorPainting from '../pages/InteriorPainting'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
+import ShopCar from '../pages/ShopCar'
 const router = [
   { path: '/home', element: <Home /> },
   { path: 'about', element: <About /> },
@@ -17,6 +18,7 @@ const router = [
   { path: 'interior', element: <InteriorPainting /> },
   { path: 'login', element: <Login /> },
   { path: 'register', element: <Register /> },
+  { path: 'shopcar', element: <ShopCar /> },
   // 重定向
   { path: '/', element: <Navigate to={'/home'} /> },
   // 404找不到

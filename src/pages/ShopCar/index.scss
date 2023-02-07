@@ -1,0 +1,68 @@
+.shopcar{
+  // margin: 0 auto;
+  width: 100%;
+  height: 1000px;
+  background-color: antiquewhite;
+  .header {
+    width: 100%;
+    height: 49px;
+    background-color: #f5f5f5;
+    line-height: 49px;
+    overflow: hidden;
+    div {
+      width: 1190px;
+      margin: 0 auto;
+      nav {
+        margin-top: 15px;
+      }
+    }
+  }
+  .body{
+    margin: 0 auto;
+    margin-top: 50px;
+    padding:19px 0 0;
+    width: 1190px;
+    height: 2250px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    .magnifier{
+        width: 714px;
+        height: 476px;
+    }
+    .content{
+      width: 428px;
+      height: 476px;
+      .line{
+        width: 60px;
+        height: 3px;
+        background-color: #cecece;
+        margin: 15px 0 25px;
+      }
+      .price{
+        font-size: 26px;
+    color: #000000;
+    line-height: 26px;
+    margin-bottom: 25px;
+
+      }
+      p{
+        width: 428px;
+        font-size: 15px;
+        margin-bottom: 5px;
+        font-weight: normal;
+        color: rgb(170, 170, 170);
+        word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+      }
+      .addnum{
+        margin-left: 40px;
+        width: 70px;
+        height: 32px;
+      }
+    }
+  }
+}

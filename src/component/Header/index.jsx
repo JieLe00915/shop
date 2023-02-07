@@ -21,7 +21,6 @@ const Header = () => {
       setUser(users.username);
     }
   }, [users]);
-  console.log(user);
   // 搜索
   function onSearch(value) {
     console.log(value);
