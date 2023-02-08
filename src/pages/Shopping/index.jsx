@@ -39,7 +39,7 @@ export default function Shopping() {
       src: "http://localhost:3000/static/media/hoLb1.e700a08430757a29ed1a.webp",
       desc: '对得起我佛起飞后啊十四大',
       category:'椅子',
-      cid:2132
+      cid:213662
     },
     {
       id: 34,
