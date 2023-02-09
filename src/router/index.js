@@ -10,6 +10,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ShopCar from "../pages/ShopCar";
 import ShopCarOrder from "../pages/ShopCarOrder";
+import Oderbill from "../pages/Oderbill";
 const router = [
   { path: "/home", element: <Home /> },
   { path: "/about", element: <About /> },
@@ -23,6 +24,7 @@ const router = [
     path: "/shopcar",
     element: <ShopCar />,
   },
+  { path: "/oderbill", element: <Oderbill /> },
   { path: "shopcarorder", element: <ShopCarOrder /> },
   // 重定向
   { path: "/", element: <Navigate to={"/home"} /> },

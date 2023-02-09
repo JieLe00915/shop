@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import {Link} from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { deleteShop } from "../../store/reducers/shopcar";
 import { Space, Table, Button } from "antd";
@@ -63,12 +64,15 @@ const ShopCarOrder = () => {
           <p style={{ borderBottom: "3px solid #ccc" }}>
             订单总计 <span>¥ {resPrice}</span>
           </p>
+          <Link to={'/oderbill'}>
           <Button
             type="primary"
             style={{ width: "370px", marginTop: "10px", height: "40px" }}
           >
             前往收银台
           </Button>
+            </Link>
+       
         </div>
       </div>
     </div>
