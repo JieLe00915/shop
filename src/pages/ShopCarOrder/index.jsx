@@ -58,10 +58,10 @@ const ShopCarOrder = () => {
         <div className="right">
           <div>购物车总计 </div>
           <p>
-            购物车小计 <span>¥ 423434</span>
+            购物车小计 <span>¥ { resPrice}</span>
           </p>
           <p style={{ borderBottom: "3px solid #ccc" }}>
-            订单总计 <span>¥ 34244</span>
+            订单总计 <span>¥ {resPrice}</span>
           </p>
           <Button
             type="primary"
