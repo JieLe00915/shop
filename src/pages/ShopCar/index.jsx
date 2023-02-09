@@ -17,9 +17,7 @@ const ShopCar = () => {
   const resPrice = shopObj.reduce((total, ele, index) => {
     return total + ele.count * ele.price;
   }, 0);
-  console.log(33333, resPrice);
   const [count, setCount] = useState(1);
-  console.log(1111, shopObj);
   // 抽屉
   const [open, setOpen] = useState(false);
   // 数量
@@ -36,6 +34,7 @@ const ShopCar = () => {
         src: src,
         count: count,
         cid: cid,
+        key:Math.random() *1234
       })
     );
     setOpen(true);
@@ -47,9 +46,19 @@ const ShopCar = () => {
   const tabChange = (key) => {
     console.log(999, key);
   };
+  // 删除购物车商品
+  function deleteshop(ele) {
+    return () => {
+      console.log(111, ele);
+      // @ts-ignore
+      dispatch(deleteShop({cid:ele.cid}))
+
+      }
+  }
   return (
     <div className="shopcar">
       <div className="header">
+        
         <div>
           <Breadcrumb separator=">">
             <Breadcrumb.Item>首页</Breadcrumb.Item>
@@ -153,9 +162,21 @@ const ShopCar = () => {
                     color: "#777",
                     fontSize: "14px",
                     paddingLeft: "20px",
+                    position:'relative'
                   }}
                 >
                   <p>{ele.title}</p>
+                  <button
+                    style={{
+                      position: 'absolute',
+                      right: '0',
+                      top: '0',
+                    }}
+                    // @ts-ignore
+                    onClick={deleteshop(ele)}
+                  >
+                    x
+                  </button>
                   <p>
                     {ele.count} x ¥{ele.price}
                   </p>

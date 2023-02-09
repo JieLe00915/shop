@@ -60,28 +60,24 @@
       }
     }
   }
-  .footer{
+  .footer {
     width: 1190px;
-    // height: 1500px;
     margin: 0 auto;
+    padding-left: 20px;
     background: #f5f5f5;
-    .ant-tabs-tab  {
+    .ant-tabs-tab {
       font-size: 14px;
       font-weight: bold;
       color: #999;
-      width: 50px;
-      .ant-tabs-tab-btn{
-        text-align: center;
-      }
     }
-    .tabparams{
+    .tabparams {
       height: 1400px;
-      img{
+      img {
         width: 1190px;
       }
     }
-    .tabsize{
-      width: 1190px;
+    .tabsize {
+      width: 1170px;
       height: 60px;
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
@@ -91,7 +87,8 @@
       font-weight: 600;
       display: flex;
       margin-bottom: 50px;
-      div{
+      div {
+        padding-left: 10px;
         width: 150px;
       }
     }
