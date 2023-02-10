@@ -49,8 +49,7 @@ const ShopCar = () => {
   // 删除购物车商品
   function deleteshop(ele) {
     return () => {
-      console.log(111, ele);
-      // @ts-ignore
+      console.log(111, ele);      // @ts-ignore
       dispatch(deleteShop({cid:ele.cid}))
 
       }
