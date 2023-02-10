@@ -64,7 +64,7 @@ const ShopCarOrder = () => {
           <p style={{ borderBottom: "3px solid #ccc" }}>
             订单总计 <span>¥ {resPrice}</span>
           </p>
-          <Link to={'/'}>
+          <Link to={'/oderbill'}>
           <Button
             type="primary"
             style={{ width: "370px", marginTop: "10px", height: "40px" }}

@@ -1,8 +1,6 @@
 .orderBill {
   width: 100%;
   margin-bottom: 100px;
-  // height: 6;
-  // background-color: lawngreen;
   overflow: hidden;
   .content {
     width: 1190px;
@@ -11,7 +9,6 @@
     display: flex;
     .left {
       width: 664px;
-      background-color: #ccc;
       .ant-form-item-label {
         text-align: left;
       }

@@ -1,7 +1,8 @@
 import React from "react";
 import "./index.scss";
 import Address from "./address";
-import { Radio, Button, Form, Input } from "antd";
+import {useNavigate} from 'react-router-dom';
+import { Radio, Button, Form, Input,message } from "antd";
 import { useSelector } from "react-redux";
 const layout = {
   labelCol: {
@@ -17,14 +18,25 @@ const validateMessages = {
   required: "输入不能为空!",
 };
 const Orderbill = () => {
+  const navigate=useNavigate()
   // redux
   const shopObj = useSelector((state) => state.counter);
   const resPrice = shopObj.reduce((total, ele, index) => {
     return total + ele.count * ele.price;
   }, 0);
   // 表单
+  const user = window.localStorage.getItem('etshopUser');
+  const error = () => {
+    message.error('请先登录您的账户！');
+  };
   const onFinish = (values) => {
-    console.log(values);
+   
+    if (user) {
+      console.log(values);
+    } else {
+      error()
+      navigate('/login')
+    }
   };
   return (
     <div className="orderBill">

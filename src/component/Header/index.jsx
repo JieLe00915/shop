@@ -4,7 +4,7 @@ import {
   ShoppingCartOutlined,
   PoweroffOutlined,
 } from "@ant-design/icons";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link ,useNavigate} from "react-router-dom";
 import { Input, Button, Space, message } from "antd";
 import "./index.scss";
 import logoimg from "../../images/logo.webp";
@@ -13,6 +13,7 @@ const Header = () => {
   // 关闭加载
   const [loadings, setLoadings] = useState([]);
   const [user, setUser] = useState("");
+  const navigate=useNavigate()
   //获取本地用户
   // @ts-ignore
   const users = JSON.parse(window.localStorage.getItem("shopUser"));
@@ -24,6 +25,11 @@ const Header = () => {
   // 搜索
   function onSearch(value) {
     console.log(value);
+    if (value) {
+      navigate('/shopping',{state:{key:value}})
+    } else {
+      
+    }
   }
 
   // 退出登录
