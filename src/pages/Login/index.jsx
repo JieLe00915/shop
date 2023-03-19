@@ -1,32 +1,41 @@
 import React from "react";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
-import { Button, Checkbox, Form, Input,Popover } from "antd";
+import { Button, Checkbox, Form, Input,Popover ,message} from "antd";
 import {
   QqOutlined
 } from '@ant-design/icons';
 
 import news1 from "../../images/news2.webp";
+import qrcod from "../../images/qrcod.jpg";
 import loginbg from "../../images/loginbg.webp";
-
+import api from '../../api';
 const Login = () => {
   const navigate=useNavigate()
   const content = (
     <div>
-      <img src={ news1} alt="" width={70} height={ 70} />
+      <img src={ qrcod} alt="" width={70} height={ 70} />
     </div>
   );
-  const onFinish = (values) => {
-    console.log("Success:", values);
+  const onFinish = async(values) => {
     const personObj = {
       username: values.username,
       password: values.password
     }
-   navigate(-1)
+    const res = await api.getLogin({
+      username:personObj.username,
+      password:personObj.password,
+    })
+    if (res.data.status===200) {
+      navigate(-1)
    window.localStorage.setItem('shopUser',JSON.stringify(personObj));
+    }else{
+      message.error('您输入的账号密码错误，请重新输入！');
+    }
+   
   };
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+    message.error('您输入的账号密码错误，请重新输入！');
   };
   return (
     <div className="login">

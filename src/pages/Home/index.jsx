@@ -103,7 +103,7 @@ export default function Home() {
     <div className="homeHeader">
       <div className="header">
         <ul>
-          <li style={{ width: "945px", height: "647px" }}>
+          <li style={{ width: "930px", height: "647px" }}>
             <Carousel autoplay>
               <div>
                 <img src={hoLb1} alt="1" height={647} />
@@ -136,7 +136,7 @@ export default function Home() {
             <Image  height={487}  src={home4}/>
             </Popover>
           </li>
-          <li style={{ width: "938px", height: "487px" }}>
+          <li style={{ width: "925px", height: "487px" }}>
             <Popover placement="top" title="商品名称" content={<>沙发</>}>
               <Image height={487} src={home5} style={{zIndex:'-1299'}} />
             </Popover>

@@ -7,7 +7,7 @@ export default function News() {
   const [datas,setDatas]=useState([])
   const list=[
     {
-      src:"http://localhost:3000/static/media/news1.914b4a7d51d57906c369.webp",
+      src:"https://ccdn.goodq.top/caches/f3e2686ae5c8d478262426df3f106330/aHR0cDovLzVjOWRjODdjMDlhYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOS8wNC9mMGVlMjA3NTNkZWNlYzA4OWVkZDhjYTMzMWNlOTFkYi05MC53ZWJw.webp",
       title:"如何选择室内装饰画",
       data:'2019/ 04/15 14：25',
       descr:'如果你对一个程序员说：你的代码有bug。',
@@ -17,7 +17,7 @@ export default function News() {
       content1:'2.依据墙体尺寸 悬挂装饰画或是前方没有参照物，或是忽略参照物的存在，以装饰画可占用客厅区墙体，或当客厅与其它区域相连，并共用同面“不间断”墙体时，可占用的该“共用墙体”面积为参照，面积长度较大，单幅装饰画宽度或组合装饰画的“总宽度”是它的2/3左右较合适，面积长度较小，单幅装饰画宽度或组合装饰画的“总宽度”是它的0.8倍左右较合适，有较饱满的装饰感，对于“公用墙体”而言，还有将相连区域“合二为一”，扩大区域面积感的效果，但装饰画只占用客厅区墙体，且墙体前方有参照物的情况，会有一定的压迫感产生，考虑在内；',
     },
     {
-      src:"http://localhost:3000/static/media/news2.86144aadf4afc13aa349.webp",
+      src:"https://ccdn.goodq.top/caches/f3e2686ae5c8d478262426df3f106330/aHR0cHM6Ly81YzlkYzg3YzA5YWFlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNDdiNTE3NTJhNTE2NjUwOTc5MDUxZWE1MzBkZTUxZTktNTAweDQwMC05MC53ZWJw.webp",
       title:"说到墙面装饰，你一定会想起来的照片墙",
       data:'2017/ 05/23 18：05',
       descr:'面试官：你是专业设计师是吧，那你说说我身上这件衣服的色值多少？',
@@ -27,7 +27,7 @@ export default function News() {
       content1:'2. 餐厅照片墙照片墙用在餐厅空间也是常见的。一般来说，餐厅空间没有客厅那么大，因此可以根据空间的大小不同，选择单一大张照片，也可选用系列照片装饰。 照片除了常见的悬挂方式外，也可以做成支架进行摆放。墙面上的装饰和摆台上的装饰，可以丰富墙面的层次感，也是颇为美观的。台面的装饰照片除了可以选择悬挂的方式，还可以选择这种摆放的方式，墙面装饰和摆台上装饰相互呼应，使平面的墙体富有立体感。这样的装饰方式，马上能让立体感、空间感体现出来，效果会大不一样。在餐厅的一面墙上，可以没有特定规则，随意选取喜欢的照片贴上，也是一种往日重现的景象。照片的尺寸可以根据照片墙的空间自行调节，适当留白处理会让空间更加富有文艺气息。如果空间整体色调偏冷，那么适当选取一些暖色调的软装进行装饰也是不错的。',
     },
     {
-      src:"http://localhost:3000/static/media/news3.adf36f5f743bb1380f80.webp",
+      src:"https://ccdn.goodq.top/caches/f3e2686ae5c8d478262426df3f106330/aHR0cHM6Ly81YzlkYzg3YzA5YWFlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvZDllMjUyNWYzZWIzNzNhNGU5YTZiZDc1YTYyNjFkNjUtNTAweDQwMC05MC53ZWJw.webp",
       title:"现代星级酒店设计的动态变化趋势",
       data:'2019/ 04/15  9：52',
       descr:'前阵子，公司一个人遇到个记者，记者问他："看您身板硬朗、精神矍铄，请问您养生秘诀是什么？',

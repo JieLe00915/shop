@@ -7,7 +7,6 @@ const Comments = () => {
   const [dislikes, setDislikes] = useState(0);
   const [action, setAction] = useState(null);
   const [user, setUser] = useState('');
-  console.log(1345135, user);
   useEffect(() => {
     setUser(window.localStorage.getItem('shopUser'))
    
@@ -47,9 +46,7 @@ const Comments = () => {
        avatar={<Avatar src="https://joeschmoe.io/api/v1/random" alt="Han Solo" />}
        content={
          <p>
-           We supply a series of design principles, practical patterns and high quality design
-           resources (Sketch and Axure), to help people create their product prototypes beautifully
-           and efficiently.
+           这家公司制作的椅子物美价廉，性价比高，耐用，200斤的胖子都能够承担，兄弟们还在等什么，冲就完了。
          </p>
        }
        datetime={

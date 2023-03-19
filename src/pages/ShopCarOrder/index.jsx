@@ -12,6 +12,7 @@ const ShopCarOrder = () => {
   const resPrice = shopObj.reduce((total, ele, index) => {
     return total + ele.count * ele.price;
   }, 0);
+  console.log(111,resPrice);
   const columns = [
     {
       title: "名称",

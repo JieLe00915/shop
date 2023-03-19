@@ -15,7 +15,7 @@ const ShopCar = () => {
   const shopObj = useSelector((state) => state.counter);
   const dispatch = useDispatch();
   const resPrice = shopObj.reduce((total, ele, index) => {
-    return total + ele.count * ele.price;
+    return total + (ele.count * ele.price);
   }, 0);
   const [count, setCount] = useState(1);
   // 抽屉
@@ -49,7 +49,7 @@ const ShopCar = () => {
   // 删除购物车商品
   function deleteshop(ele) {
     return () => {
-      console.log(111, ele);      // @ts-ignore
+    // @ts-ignore
       dispatch(deleteShop({cid:ele.cid}))
 
       }

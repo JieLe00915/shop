@@ -49,9 +49,11 @@
     display: flex;
     box-sizing: border-box;
     flex-wrap: wrap;
-    align-content: start;
-    justify-content: space-between;
+    justify-content: start;
+
+    align-items: flex-start;
     .ant-card{
+      margin-right: 10px;
       margin-bottom: 20px;
     }
     .ant-card-meta-detail > div:not(:last-child) {

@@ -4,7 +4,7 @@ import {
   ShoppingCartOutlined,
   PoweroffOutlined,
 } from "@ant-design/icons";
-import { NavLink, Link ,useNavigate} from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { Input, Button, Space, message } from "antd";
 import "./index.scss";
 import logoimg from "../../images/logo.webp";
@@ -13,7 +13,7 @@ const Header = () => {
   // 关闭加载
   const [loadings, setLoadings] = useState([]);
   const [user, setUser] = useState("");
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   //获取本地用户
   // @ts-ignore
   const users = JSON.parse(window.localStorage.getItem("shopUser"));
@@ -26,9 +26,9 @@ const Header = () => {
   function onSearch(value) {
     console.log(value);
     if (value) {
-      navigate('/shopping',{state:{key:value}})
+      navigate('/shopping', { state: { key: value } })
     } else {
-      
+
     }
   }
 
@@ -125,10 +125,17 @@ const Header = () => {
           onSearch={onSearch}
         />
         <div className="nav-icon">
-          <ShoppingCartOutlined style={{ color: "red", fontSize: "25px" }} />
-          <Link to={"/login"}>
+          <Link to={"/shopcarorder"}>
+            <ShoppingCartOutlined style={{ color: "red", fontSize: "25px" }} />
+          </Link>
+
+           {
+            user? <UserOutlined style={{ color: "red", fontSize: "25px" }} />:
+            <Link to={"/login"}>
             <UserOutlined style={{ color: "red", fontSize: "25px" }} />
           </Link>
+           }
+         
         </div>
       </div>
       <div className="admin">

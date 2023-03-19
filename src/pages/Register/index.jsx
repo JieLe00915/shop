@@ -8,7 +8,7 @@ import {
 
 import news1 from "../../images/news2.webp";
 import loginbg from "../../images/loginbg.webp";
-
+import api from '../../api';
 const Register = () => {
   const navigate=useNavigate()
   const content = (
@@ -16,21 +16,27 @@ const Register = () => {
       <img src={ news1} alt="" width={70} height={ 70} />
     </div>
   );
-  const onFinish = (values) => {
-    console.log("Success:", values);
-    success()
-    navigate('/login');
-
+  const onFinish = async(values) => {
+    const res=await api.getregister({
+      username: values.username,
+      password: values.password,
+      email:values.email
+    })
+    if (res.data.status ===200) {
+      message
+      .loading('正在注册中...', 2.5)
+      .then(() => message.success('注册成功!', 2.5))
+      .then(() => message.info('马上跳转到登录页面', 2.5))
+      .then(()=>  navigate('/login'));
+     ;
+    }
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
   // 注册成功
   const success = () => {
-       message
-      .loading('正在注册中...', 2.5)
-      .then(() => message.success('注册成功!', 2.5))
-      .then(() => message.info('Loading finished is finished', 2.5));
+     
   };
   return (
     <div className="register">
